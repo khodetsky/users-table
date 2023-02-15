@@ -11,9 +11,9 @@ This project was created using
 3. Install the project's base dependencies with the `npm install` command or
    `yarn install`.
 4. Start development mode by running `npm start` or `yarn start`.
-5. Open http://localhost:3000 to view it in the browser. The page will
-   automatically reload if you make changes to the code. You will see the build
-   errors and lint warnings in the console.
+5. Open http://localhost:3000/test-spilna-sprava to view it in the browser. The
+   page will automatically reload if you make changes to the code. You will see
+   the build errors and lint warnings in the console.
 6. `npm test` or `yarn test` command runs the test watcher in an interactive
    mode. By default, runs tests related to files changed since the last commit.
 7. `npm run build` or `yarn build` command builds the app for production to the
@@ -21,7 +21,7 @@ This project was created using
    build for the best performance. The build is minified and the filenames
    include the hashes. App is ready to be deployed.
 
-### Live page
+## Live page
 
 The production version of the project is automatically linted, built, and
 deployed to GitHub Pages, in the gh-pages branch, every time the main branch is
@@ -30,7 +30,7 @@ updated. For example, after a direct push or an accepted pull request.
 The live page can be viewed at
 "https://khodetsky.github.io/test-spilna-sprava/".
 
-#### How it works
+## How it works
 
 1. After each push to the `main` branch of the GitHub repository, a special
    script (GitHub Action) from `.github/workflows/deploy.yml` file.
