@@ -8,42 +8,42 @@ export const TableRow = ({columnsName}) => {
                 (
                 usersData.map(user => (
                     <tr key={user.id}>
-                        {columnsName.includes('id') &&
+                        {columnsName.includes('ID') &&
                             (<td >
                                 {user.id}
                             </td>)
                         }
-                        {columnsName.includes('name') &&
+                        {columnsName.includes('NAME') &&
                             (<td >
                                 {user.name}
                             </td>)
                         }
-                        {columnsName.includes('username') &&
+                        {columnsName.includes('USERNAME') &&
                             (<td >
                                 {user.username}
                             </td>)
                         }
-                        {columnsName.includes('email') &&
+                        {columnsName.includes('EMAIL') &&
                             (<td >
                                 {user.email}
                             </td>)
                         }
-                        {columnsName.includes('adress') &&
+                        {columnsName.includes('ADRESS') &&
                             (<td >
                                 {user.adress}
                             </td>)
                         }
-                        {columnsName.includes('phone') &&
+                        {columnsName.includes('PHONE') &&
                             (<td >
                                 {user.phone}
                             </td>)
                         }
-                        {columnsName.includes('website') &&
+                        {columnsName.includes('WEBSITE') &&
                             (<td >
                                 {user.website}
                             </td>)
                         }
-                        {columnsName.includes('company') &&
+                        {columnsName.includes('COMPANY') &&
                             (<td >
                                 {user.company}
                             </td>)
