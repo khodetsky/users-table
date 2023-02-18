@@ -6,12 +6,14 @@ import { ColumnsNameContainer } from "../ColumnsNameContainer/ColumnsNameContain
 
 export const SelectColumnsModal = ({ initColumns, columnsName, setColumsName, closeModal }) => {
     const [notSelectedColumns, setNotSelectedColumns] = useState([]);
-    const [selectedColumns, setSelectedColumns] = useState(columnsName);
+    const [selectedColumns, setSelectedColumns] = useState([]);
     const [filter, setFilter] = useState('');
 
     useEffect(() => {
-        let arr = initColumns.filter(column => !columnsName.includes(column));
-        setNotSelectedColumns(arr);
+        let notSelectedArr = initColumns.filter(column => !columnsName.includes(column));
+        setNotSelectedColumns(notSelectedArr);
+        let selectedArr = columnsName.filter(column => !notSelectedArr.includes(column))
+        setSelectedColumns(selectedArr);
     }, [initColumns, columnsName]);
 
     const filterColumns = (e) => {
@@ -27,7 +29,7 @@ export const SelectColumnsModal = ({ initColumns, columnsName, setColumsName, cl
         if (notSelectedColumns.length > 0) {
             setNotSelectedColumns(prevState => (prevState.filter(column => column !== columnName)));
 
-            setSelectedColumns([...selectedColumns, columnName]);
+            setSelectedColumns(prevState => [...prevState, columnName]);
         }
     }
 
@@ -35,7 +37,7 @@ export const SelectColumnsModal = ({ initColumns, columnsName, setColumsName, cl
         if (selectedColumns.length > 0) {
             setSelectedColumns(prevState => (prevState.filter(column => column !== columnName)));
 
-            setNotSelectedColumns([...notSelectedColumns, columnName]);
+            setNotSelectedColumns(prevState => [...prevState, columnName]);
         }
     }
 

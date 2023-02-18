@@ -6,24 +6,25 @@ const ItemTypes = {
   COLUMN: 'column',
 }
 
-export const SelectedListItem = ({ cardType, children, neadIcon, deleteColumn, selectColumn }) => {
+export const SelectedListItem = ({ children, neadIcon, deleteColumn, selectColumn }) => {
 
         const [{ isDragging }, drag] = useDrag(() => ({
           type: ItemTypes.COLUMN,
-          item: { cardType },
-          end: (item) => {
-            if (item) {
-                selectColumn(item.cardType);
-                console.log(item.cardType);
-            }
-          },
-          collect: (monitor) => ({
-            isDragging: monitor.isDragging(),
-            handlerId: monitor.getHandlerId(),
-          }),
-        }))
+          item: { children },
+            end: (item, monitor) => {
+                const dropResult = monitor.getDropResult();
+
+                if (item && dropResult) {
+                    selectColumn(item.children);
+                }
+            },
+            collect: (monitor) => ({
+                isDragging: monitor.isDragging(),
+                handlerId: monitor.getHandlerId(),
+            }),
+        }), [children])
     
-    const opacity = isDragging ? 0.4 : 1;
+    const opacity = isDragging ? 0.6 : 1;
 
     return (
         <>

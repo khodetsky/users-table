@@ -1,15 +1,18 @@
 import { SelectedListItem } from "../SelectedListItem/SelectedListItem";
 import { Container, SelectedList, ContainerTitle } from "./ColumnsNameContainer.styled";
-import { useDrop } from 'react-dnd'
+import { useDrop } from 'react-dnd';
 
 const ItemTypes = {
   COLUMN: 'column',
 }
 
-export const ColumnsNameContainer = ({ children, columnsArr, neadIcon, deleteColumn, selectColumn}) => {
+export const ColumnsNameContainer = ({ children, columnsArr, neadIcon, deleteColumn, selectColumn }) => {
+
     const [{ canDrop, isOver }, drop] = useDrop(() => ({
         accept: ItemTypes.COLUMN,
-        drop: () => ({ name: 'Dustbin' }),
+        drop: () =>
+            ({ name: 'Dustbin' })
+        ,
         collect: (monitor) => ({
             isOver: monitor.isOver(),
             canDrop: monitor.canDrop(),
@@ -46,7 +49,7 @@ export const ColumnsNameContainer = ({ children, columnsArr, neadIcon, deleteCol
                         <SelectedList >
                             {columnsArr.map((item, index) => (
                                 <li key={index}>
-                                    <SelectedListItem cardType={item} neadIcon={neadIcon} selectColumn={selectColumn}>{item}</SelectedListItem>
+                                    <SelectedListItem neadIcon={neadIcon} selectColumn={selectColumn}>{item}</SelectedListItem>
                                 </li>
                             ))}
                         </SelectedList>
