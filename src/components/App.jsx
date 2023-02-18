@@ -28,7 +28,14 @@ export const App = () => {
           <MainButton clickOnBtn={openSelectModal}>Select Columns</MainButton>
           <Table columnsName={columnsName} />
         </Section>
-        {modalIsOpen && <SelectColumnsModal initColumns={initColumns} columnsName={columnsName} setColumsName={setColumsName} closeModal={closeSelectModal} />}
+        {modalIsOpen &&
+          <SelectColumnsModal
+            initColumns={initColumns}
+            columnsName={columnsName}
+            setColumsName={setColumsName}
+            closeModal={closeSelectModal}
+          />
+        }
       </main>
       <GlobalStyle/> 
     </>

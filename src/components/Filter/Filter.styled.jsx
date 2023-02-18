@@ -6,20 +6,20 @@ export const FilterContainer = styled.div`
 
 export const FilterInput = styled.input`
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 1.25;  
   box-sizing: border-box;
   width: 250px;
-  color: #FFFFFF;
+  color: black;
   border: none;
-  background-color: #000000;
-  border-radius: 15px;
-  padding: 10px 15px;
+  background-color: #238ee3;
+  border-radius: 8px;
+  padding: 7px 15px;
   outline: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
-  // transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  // &:focus {
-  //   border-color: #7B61FF;
-  // }
+  &::placeholder {
+    color: black;
+  }
 `

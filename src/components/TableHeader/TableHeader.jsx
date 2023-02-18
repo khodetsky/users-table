@@ -1,19 +1,20 @@
+import { TableRow, TableHed } from "./TableHeader.styled";
 
 export const TableHeader = ({columnsName}) => {
 
     return (
         <thead>
-            <tr>
+            <TableRow>
                 {columnsName &&
                     (
                         columnsName.map(column => (
-                            <th key={column}>
-                                {column.toUpperCase()}
-                            </th>
+                            <TableHed key={column}>
+                                {column}
+                            </TableHed>
                         ))
                     )
                 }
-            </tr>
+            </TableRow>
         </thead>
     )
 }

@@ -53,8 +53,20 @@ export const SelectColumnsModal = ({ initColumns, columnsName, setColumsName, cl
             <ModalStyled >
                 <Filter filterColumns={filterColumns} />
                 <SelectContainer>
-                    <ColumnsNameContainer columnsArr={filteredColumns()} neadIcon={false} selectColumn={selectColumn}>Available Columns</ColumnsNameContainer>
-                    <ColumnsNameContainer columnsArr={selectedColumns} neadIcon={true} deleteColumn={deleteColumn}>Selected Columns</ColumnsNameContainer>
+                    <ColumnsNameContainer
+                        columnsArr={filteredColumns()}
+                        neadIcon={false}
+                        selectColumn={selectColumn}
+                    >
+                        Available Columns
+                    </ColumnsNameContainer>
+                    <ColumnsNameContainer
+                        columnsArr={selectedColumns}
+                        neadIcon={true}
+                        deleteColumn={deleteColumn}
+                    >
+                        Selected Columns
+                    </ColumnsNameContainer>
                 </SelectContainer>
                 <ButtonContainer>
                     <MainButton clickOnBtn={submitSelectAndClose}>Apply</MainButton>

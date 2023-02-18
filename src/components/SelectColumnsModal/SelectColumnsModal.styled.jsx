@@ -18,7 +18,7 @@ export const Backdrop = styled.div`
     z-index: 2;
 
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(0 43 253 / 35%);
 
     animation: ${openModalOpacity} 250ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
 
@@ -29,7 +29,8 @@ export const Backdrop = styled.div`
 
 export const ModalStyled = styled.div`
   padding: 30px;
-  background-color: #7e7e7e;
+  // background-color: #7e7e7e;
+  background-color: rgb(235 42 42);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px 0px, rgba(0, 0, 0, 0.22) 0px 15px 12px 0px;
   border-radius: 20px;
   width: auto;

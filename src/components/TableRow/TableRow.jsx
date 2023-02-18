@@ -1,4 +1,5 @@
 import usersData from "../../userData.json";
+import { TableData } from './TableRow.styled';
 
 export const TableRow = ({columnsName}) => {
 
@@ -11,9 +12,9 @@ export const TableRow = ({columnsName}) => {
                         {columnsName.map(column => {
                             const colToLower = column.toLowerCase();
                             return (
-                                <td key={colToLower}>
+                                <TableData key={colToLower}>
                                     {user[colToLower]}
-                                </td>
+                                </TableData>
                             )
                         })}
                     </tr>

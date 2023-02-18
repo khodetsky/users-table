@@ -20,24 +20,24 @@ export const ColumnsNameContainer = ({ children, columnsArr, neadIcon, deleteCol
     }))
     
     const isActive = canDrop && isOver;
-    let backgroundColor = '#504f4f';
+    let boxShadow;
 
-    if (isActive) {
-        backgroundColor = 'darkgreen';
-    } else if (canDrop) {
-        backgroundColor = 'darkkhaki';
+    if (isActive || canDrop) {
+        boxShadow = 'rgba(0, 0, 0, 0.56) 0px 22px 70px 4px';
     }
 
     return (
         <>
             {neadIcon
                 ? (
-                    <Container ref={drop} style={{backgroundColor}}>
+                    <Container ref={drop} style={{boxShadow}}>
                         <ContainerTitle>{children}</ContainerTitle>
                         <SelectedList >
                             {columnsArr.map((item, index) => (
                                 <li key={index}>
-                                    <SelectedListItem neadIcon={neadIcon} deleteColumn={deleteColumn}>{item}</SelectedListItem>
+                                    <SelectedListItem neadIcon={neadIcon} deleteColumn={deleteColumn}>
+                                        {item}
+                                    </SelectedListItem>
                                 </li>
                             ))}
                         </SelectedList>
