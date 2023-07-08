@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/test-spilna-sprava/static/css/main.17654e45.css",
-    "main.js": "/test-spilna-sprava/static/js/main.140037fa.js",
-    "static/media/sprite.svg": "/test-spilna-sprava/static/media/sprite.4c515a77d24254593d3de0e83303916b.svg",
-    "index.html": "/test-spilna-sprava/index.html",
-    "main.17654e45.css.map": "/test-spilna-sprava/static/css/main.17654e45.css.map",
-    "main.140037fa.js.map": "/test-spilna-sprava/static/js/main.140037fa.js.map"
+    "main.css": "/users-table/static/css/main.17654e45.css",
+    "main.js": "/users-table/static/js/main.f1c82f3c.js",
+    "static/media/sprite.svg": "/users-table/static/media/sprite.4c515a77d24254593d3de0e83303916b.svg",
+    "index.html": "/users-table/index.html",
+    "main.17654e45.css.map": "/users-table/static/css/main.17654e45.css.map",
+    "main.f1c82f3c.js.map": "/users-table/static/js/main.f1c82f3c.js.map"
   },
   "entrypoints": [
     "static/css/main.17654e45.css",
-    "static/js/main.140037fa.js"
+    "static/js/main.f1c82f3c.js"
   ]
 }
