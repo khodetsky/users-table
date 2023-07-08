@@ -10,7 +10,7 @@ This is a site with information about users in tabular format. It has control of
 3. Install the project's base dependencies with the `npm install` command or
    `yarn install`.
 4. Start development mode by running `npm start` or `yarn start`.
-5. Open http://localhost:3000/test-spilna-sprava to view it in the browser. The
+5. Open http://localhost:3000/users-table to view it in the browser. The
    page will automatically reload if you make changes to the code. You will see
    the build errors and lint warnings in the console.
 6. `npm test` or `yarn test` command runs the test watcher in an interactive
