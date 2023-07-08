@@ -1,7 +1,6 @@
-# Test task from company Spilna Sprava
+# About
 
-This project was created using
-[Create React App](https://github.com/facebook/create-react-app)
+This is a site with information about users in tabular format. It has control of table fields using a modal window with D&D implementation.
 
 ## Preparation.
 
